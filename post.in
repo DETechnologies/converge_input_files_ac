@@ -17,6 +17,6 @@ cells:
       -                   total_temperature
       -                   velocity
       -                   volume
-   turbulence:            [sgs_eps, sgs_ke, turb_viscosity]
+   turbulence:            turb_viscosity
    species_massfrac:      [OH, O2, H2O, H2]
 

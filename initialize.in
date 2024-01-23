@@ -10,7 +10,8 @@ version: 3.1
       turbulence_init:
          approach:        value
          value:
-            sgs_ke:       1
+            tke:          1                                           # Initial turbulent kinetic energy in the region (m^2/s^2).
+            eps:          100                                         # Initial tke dissipation rate in the region (m^2/s^3).
       species_init:
          H2:              0.135
          O2:              0.865
@@ -24,7 +25,8 @@ version: 3.1
       turbulence_init:
          approach:        value
          value:
-            sgs_ke:       1
+            tke:          1                                           # Initial turbulent kinetic energy in the region (m^2/s^2).
+            eps:          100                                         # Initial tke dissipation rate in the region (m^2/s^3).
       species_init:
          N2:              1
       passive_init:
@@ -37,7 +39,8 @@ version: 3.1
       turbulence_init:
          approach:        value
          value:
-            sgs_ke:       1
+            tke:          1                                           # Initial turbulent kinetic energy in the region (m^2/s^2).
+            eps:          100                                         # Initial tke dissipation rate in the region (m^2/s^3).
       species_init:
          H2:              0.135
          O2:              0.865
@@ -51,7 +54,8 @@ version: 3.1
       turbulence_init:
          approach:        value
          value:
-            sgs_ke:       1
+            tke:          1                                           # Initial turbulent kinetic energy in the region (m^2/s^2).
+            eps:          100                                         # Initial tke dissipation rate in the region (m^2/s^3).
       species_init:
          H2:              0.135
          O2:              0.865

@@ -27,9 +27,11 @@ boundary_conditions:
             value:
                {}
          turbulence:
-            sgs_ke:
-               type:      Intensity
-               value:     0.01
+            tke:
+               type:      Intensity                                   # Tke type: Zero normal gradient (NE), Specified Value (DI), Intensity.
+               value:     0.01                                        # Tke value.
+            eps:
+               type:      Law_of_wall                                 # Eps type: Zero normal gradient (NE), Specified Value (DI), Length scale, Wall model.
    -  boundary:
          id:              2                                           # Boundary ID. Default boundary ID is 0.
          type:            WALL                                        # Options: WALL, INFLOW, OUTFLOW, PERIODIC, SYMMETRY, TWO_D, GT-SUITE, INTERFACE, FLOW_THROUGH.
@@ -53,9 +55,11 @@ boundary_conditions:
          passive:
             type:         Neumann                                     # Passive type: Zero normal gradient (NE), Specified Value (DI).
          turbulence:
-            sgs_ke:
-               type:      Neumann
-               value:     0
+            tke:
+               type:      Neumann                                     # Tke type: Zero normal gradient (NE), Specified Value (DI), Intensity.
+               value:     0                                           # Tke value.
+            eps:
+               type:      Law_of_wall                                 # Eps type: Zero normal gradient (NE), Specified Value (DI), Length scale, Wall model.
    -  boundary:
          id:              3                                           # Boundary ID. Default boundary ID is 0.
          type:            WALL                                        # Options: WALL, INFLOW, OUTFLOW, PERIODIC, SYMMETRY, TWO_D, GT-SUITE, INTERFACE, FLOW_THROUGH.
@@ -79,9 +83,11 @@ boundary_conditions:
          passive:
             type:         Neumann                                     # Passive type: Zero normal gradient (NE), Specified Value (DI).
          turbulence:
-            sgs_ke:
-               type:      Neumann
-               value:     0
+            tke:
+               type:      Neumann                                     # Tke type: Zero normal gradient (NE), Specified Value (DI), Intensity.
+               value:     0                                           # Tke value.
+            eps:
+               type:      Law_of_wall                                 # Eps type: Zero normal gradient (NE), Specified Value (DI), Length scale, Wall model.
    -  boundary:
          id:              4                                           # Boundary ID. Default boundary ID is 0.
          type:            WALL                                        # Options: WALL, INFLOW, OUTFLOW, PERIODIC, SYMMETRY, TWO_D, GT-SUITE, INTERFACE, FLOW_THROUGH.
@@ -105,9 +111,11 @@ boundary_conditions:
          passive:
             type:         Neumann                                     # Passive type: Zero normal gradient (NE), Specified Value (DI).
          turbulence:
-            sgs_ke:
-               type:      Neumann
-               value:     0
+            tke:
+               type:      Neumann                                     # Tke type: Zero normal gradient (NE), Specified Value (DI), Intensity.
+               value:     0                                           # Tke value.
+            eps:
+               type:      Law_of_wall                                 # Eps type: Zero normal gradient (NE), Specified Value (DI), Length scale, Wall model.
    -  boundary:
          id:              5                                           # Boundary ID. Default boundary ID is 0.
          type:            OUTFLOW                                     # Options: WALL, INFLOW, OUTFLOW, PERIODIC, SYMMETRY, TWO_D, GT-SUITE, INTERFACE, FLOW_THROUGH.
@@ -128,9 +136,12 @@ boundary_conditions:
          passive:
             type:         Neumann                                     # Passive type: Zero normal gradient (NE), Specified Value (DI).
          turbulence:
-            sgs_ke:
-               type:      Neumann
-               value:     0
+            tke:
+               type:      Neumann                                     # Tke type: Zero normal gradient (NE), Specified Value (DI), Intensity.
+               value:     0                                           # Tke value.
+            eps:
+               type:      Neumann                                     # Eps type: Zero normal gradient (NE), Specified Value (DI), Length scale, Wall model.
+               value:     0                                           # Eps value.
          backflow:
             temperature:
                type:      Dirichlet
@@ -144,9 +155,11 @@ boundary_conditions:
                value:
                   {}
             turbulence:
-               sgs_ke:
-                  type:   Intensity
+               tke:
+                  type:   Intensity                                   # Options: Intensity, Specified Value (DI).
                   value:  1e-06
+               eps:
+                  type:   Neumann                                     # Options: Length scale, Specified Value (DI).
    -  boundary:
          id:              6                                           # Boundary ID. Default boundary ID is 0.
          type:            PERIODIC                                    # Options: WALL, INFLOW, OUTFLOW, PERIODIC, SYMMETRY, TWO_D, GT-SUITE, INTERFACE, FLOW_THROUGH.
