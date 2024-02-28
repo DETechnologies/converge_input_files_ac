@@ -2,11 +2,11 @@ version: 3.1
 ##!Exported by CONVERGE Studio v3.1 Nov 17 2023 11:37:36
 ---
 
-turbulence_model:         RANS_K_EPS_RNG                              # Turbulence modeling flag.
+turbulence_model:         LES_CON_DYN_STRUCT                          # Turbulence modeling flag.
 rans_models:
    k_eps_models:
       keps_cmu:           0.0845                                      # Turbulent viscosity coefficient. Typically 0.09 for k-eps and 0.0845 for RNG k-eps.
-      keps_rpr_tke:       1.39                                        # Reciprocal tke Prandtl number. Typically 1.0 for k-eps, v2-f and zeta-f, 1.39 for RNG k-eps.
+      keps_rpr_tke:       1                                           # Reciprocal tke Prandtl number. Typically 1.0 for k-eps, v2-f and zeta-f, 1.39 for RNG k-eps.
       keps_ceps1:         1.42                                        # Turbulent dissipation (eps) constant. Typically 1.44 for k-eps, 1.42 for RNG k-eps, 1.4 for v2-f/zeta-f.
       keps_ceps2:         1.68                                        # Turbulent dissipation (eps) constant. Typically 1.92 for k-eps, 1.68 for RNG k-eps, 1.9 for v2-f/zeta-f.
       keps_ceps3:         -1                                          # Turbulent dissipation (eps) constant. Disabled for Rapid Distortion RNG k-eps because CONVERGE calculates it. Typically -1.0 to 0.5.
@@ -89,7 +89,7 @@ les_models:
    les_wall_model:        1                                           # LES wall model: 0=standard law of the wall, 1=Werner and Wengle (recommended).
 wall_modeling:
    wall_dist_flag:        1                                           # Wall distance calculation scheme: 0=use 0.5 times the cell size; 1=use 0.3 times the cell size.
-   near_wall_treatment:   STANDARD                                    # Options vary depending on turbulence model used. Export from CONVERGE Studio or refer to documentation for details.
+   near_wall_treatment:   GLOBAL                                      # Options vary depending on turbulence model used. Export from CONVERGE Studio or refer to documentation for details.
    heat_model:            0                                           # Wall heat transfer model: 0=O'Rourke , 1=Han and Reitz, 2=Angelberger, 3=GruMo-UniMORE, 4=Jayatilleke.
    law_kappa:             0.42                                        # Von Karman's constant.
    law_c:                 5.5                                         # Law of wall parameter for the log-law layer branch of TKE.
